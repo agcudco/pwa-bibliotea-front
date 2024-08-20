@@ -1,9 +1,9 @@
 import React from 'react';
 import { Menubar } from 'primereact/menubar';
 import { useNavigate } from 'react-router-dom';
-//import './Navbar.css';
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
+    
     const navigate = useNavigate();
 
     const items = [
@@ -21,5 +21,3 @@ const Navbar: React.FC = () => {
 
     return <Menubar model={items} />;
 };
-
-export default Navbar;

@@ -17,7 +17,7 @@ const estadoOptions = [
     { label: 'Próximo a llegar', value: 'Próximo a llegar' }
 ];
 
-const GestionLibros: React.FC = () => {
+export const GestionLibros: React.FC = () => {
     const [books, setBooks] = useState<Book[]>([]);
     const [authors, setAuthors] = useState<Author[]>([]);
     const [selectedBook, setSelectedBook] = useState<Book | null>(null);

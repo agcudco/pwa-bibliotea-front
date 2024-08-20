@@ -9,7 +9,8 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Calendar } from 'primereact/calendar';
 
-const GestionAutores: React.FC = () => {
+export const GestionAutores: React.FC = () => {
+
     const [authors, setAuthors] = useState<Author[]>([]);
     const [selectedAuthor, setSelectedAuthor] = useState<Author | null>(null);
     const [authorDialog, setAuthorDialog] = useState(false);
@@ -64,7 +65,7 @@ const GestionAutores: React.FC = () => {
                 <Column field="nombres" header="Nombres" />
                 <Column field="apellidos" header="Apellidos" />
                 <Column field="dni" header="DNI" />
-                <Column field="fecha_nacimiento" header="Fecha de Nacimiento" />                            
+                <Column field="fecha_nacimiento" header="Fecha de Nacimiento" />
                 <Column field="pais" header="País" />
                 <Column body={(rowData) => (
                     <div>
@@ -77,11 +78,15 @@ const GestionAutores: React.FC = () => {
             <Dialog visible={authorDialog} style={{ width: '450px' }} header="Detalles del Autor" modal onHide={hideDialog}>
                 <div className="p-field">
                     <label htmlFor="nombres">Nombres</label>
-                    <InputText id="nombres" value={selectedAuthor?.nombres || ''} onChange={(e) => setSelectedAuthor({ ...selectedAuthor!, nombres: e.target.value })} />
+                    <InputText id="nombres"
+                        value={selectedAuthor?.nombres || ''}
+                        onChange={(e) => setSelectedAuthor({ ...selectedAuthor!, nombres: e.target.value })} />
                 </div>
                 <div className="p-field">
                     <label htmlFor="apellidos">Apellidos</label>
-                    <InputText id="apellidos" value={selectedAuthor?.apellidos || ''} onChange={(e) => setSelectedAuthor({ ...selectedAuthor!, apellidos: e.target.value })} />
+                    <InputText id="apellidos"
+                        value={selectedAuthor?.apellidos || ''}
+                        onChange={(e) => setSelectedAuthor({ ...selectedAuthor!, apellidos: e.target.value })} />
                 </div>
                 <div className="p-field">
                     <label htmlFor="dni">DNI</label>
@@ -111,5 +116,3 @@ const GestionAutores: React.FC = () => {
         </div>
     );
 };
-
-export default GestionAutores;

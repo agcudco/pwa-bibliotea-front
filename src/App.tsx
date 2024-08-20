@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import GestionAutores from './components/GestionAutores';
-import GestionLibros from './components/GestionLibros';
+
 import './styles/Responsive.css';
+import { Navbar } from './components/Navbar';
+import { GestionAutores } from './components/GestionAutores';
+import GestionLibros from './components/GestionLibros';
 
 const App: React.FC = () => {
     return (
