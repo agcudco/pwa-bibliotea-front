@@ -1,0 +1,51 @@
+/* Estilos para la barra de navegación en pantallas pequeñas */
+@media (max-width: 768px) {
+    .p-menubar {
+        flex-direction: column;
+    }
+
+    .p-menubar-start {
+        flex-direction: column;
+    }
+    
+    .p-menubar-root-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .p-menubar-root-item {
+        width: 100%;
+    }
+
+    .gestion-autores, .gestion-libros {
+        padding: 1rem;
+    }
+
+    .p-dialog {
+        width: 90% !important;
+    }
+}
+
+/* Aumentar el tamaño de los botones y los campos de entrada en dispositivos móviles */
+@media (max-width: 768px) {
+    .p-button {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .p-inputtext {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .p-datatable-wrapper {
+        overflow-x: auto;
+    }
+
+    .p-datatable-responsive .p-datatable-thead > tr > th,
+    .p-datatable-responsive .p-datatable-tbody > tr > td {
+        display: block;
+        text-align: left;
+    }
+}
